@@ -1,0 +1,45 @@
+<form class="{{cssClass}} background-sheet" autocomplete="off">
+  {{!-- Sheet Header --}}
+  <header>
+    <div class="base">
+      <div class="image-wrap">
+        <img
+          class="base-img"
+          src="{{actor.img}}"
+          data-edit="img"
+          title="{{actor.name}}"
+        />
+      </div>
+      <div class="base-info">
+        <div class="form-grp full">
+          <label>Handle</label>
+          <input name="name" type="text" value="{{actor.name}}" />
+        </div>
+        <div class="form-grp full">
+          <label>Role</label>
+          <input name="name" type="text" value="{{actor.name}}" />
+        </div>
+        <div class="form-inline">
+          <div class="form-grp">
+            <label>Age</label>
+            <input
+              class="number-input"
+              name="name"
+              type="number"
+              value="{{actor.name}}"
+            />
+          </div>
+          <div class="form-grp">
+            <label>Points</label>
+            <input
+              class="number-input"
+              name="name"
+              type="number"
+              value="{{actor.name}}"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</form>
