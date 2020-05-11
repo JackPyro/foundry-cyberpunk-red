@@ -7,12 +7,13 @@
 /* Global styles */
 @import "_global";
 @import "_forms";
+@import "_components";
 
 /* Styles limited to boilerplate sheets */
 .cyberpunkred {
-  min-width: 600px;
+  min-width: 595px;
   font-family: $font-primary;
-  @import "sheet/_base";
+  background-color: $c-main;
   .background-sheet {
     background-color: $c-white;
   }

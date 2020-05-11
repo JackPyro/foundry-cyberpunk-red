@@ -1,78 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400;500;600;700&display=swap");
 /* Global styles */
 .window-content {
-  padding: 1em !important;
+  padding: 16px !important;
   background: white !important;
 }
 
-.form-grp {
+.input-grp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0.25em 0em;
+  margin-bottom: 16px;
 }
 
-.form-grp input {
-  height: 35px;
-  border: 1px solid #dd3f4e;
-  border-radius: 0px;
-  background-color: white;
-  border-left: none;
-  font-size: 15px;
-}
-
-.form-grp label {
-  padding: 0.5em 1.5em;
-  border: 1px solid #dd3f4e;
-  -ms-flex-preferred-size: 30%;
-  flex-basis: 30%;
-  text-align: center;
-  color: #dd3f4e;
-  height: 35px;
-  text-transform: uppercase;
+.input-grp label {
+  background: #dd3f4e;
+  border: 2px solid #dd3f4e;
+  width: 80px;
+  height: 32px;
+  min-width: 80px;
   font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 15px;
-}
-
-.form-inline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  font-size: 14px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.number-input {
-  width: 90px;
+.input-grp input {
+  border: 2px solid #dd3f4e;
+  padding-left: 8px;
+  height: 32px;
+  border-radius: 0px 10px 0px 0px;
+  background-color: white;
 }
 
-/* Styles limited to boilerplate sheets */
-.cyberpunkred {
-  min-width: 600px;
-  font-family: "IBM Plex Sans", sans-serif;
-}
-
-.cyberpunkred .base {
-  display: grid;
-  grid-gap: 1em;
-  grid: 1fr / 1fr 4fr;
-}
-
-.cyberpunkred .base-img {
-  width: 150px;
-  height: 200px;
-  background-color: #dd3f4e;
-}
-
-.cyberpunkred .base-info {
+.stat-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,6 +49,340 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin: 4px 0px;
+}
+
+.stat-input label {
+  background-color: #0c0d0c;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 52px;
+  height: 24px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.stat-input input {
+  border: 1px solid #0c0d0c;
+  width: 52px;
+  height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.styled-input {
+  margin: 4px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.styled-input.wide-label label {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.styled-input.wide-label input {
+  -ms-flex-preferred-size: 64px;
+  flex-basis: 64px;
+  margin-left: 16px;
+}
+
+.styled-input.flex {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.styled-input.flex label {
+  font-size: 10px;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.styled-input.flex input {
+  width: 64px;
+}
+
+.styled-input.no-bg label {
+  background-color: #fff !important;
+  color: #0c0d0c !important;
+  border: 1px solid #0c0d0c;
+}
+
+.styled-input input {
+  border: 1px solid #0c0d0c;
+  padding-left: 4px;
+  height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  border-radius: 0px;
+  width: 64px;
+}
+
+.styled-input label {
+  background-color: #0c0d0c;
+  color: #fff;
+  text-transform: uppercase;
+  height: 32px;
+  text-align: center;
+  padding: 0px 4px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 120px;
+}
+
+.grid-wrap {
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  grid-gap: 32px;
+}
+
+.grid-wrap .input-grp {
+  margin: 0px;
+}
+
+.skill-roll {
+  background: none;
+  border: 1px solid #dd3f4e;
+  color: #dd3f4e;
+  width: 100%;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.skill-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.skill-input input,
+.skill-input button {
+  font-size: 12px;
+  height: 32px;
+  background: none;
+  border: 1px solid #dd3f4e;
+}
+
+.skill-input .si-name {
+  width: 144px;
+}
+
+.armor-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.armor-input input {
+  font-size: 12px;
+  border: 1px solid #0c0d0c;
+  padding-left: 4px;
+  height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.armor-input label {
+  background-color: #0c0d0c;
+  color: #fff;
+  text-transform: uppercase;
+  height: 32px;
+  text-align: center;
+  padding: 0px 4px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.armor-input .armor-name {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.armor-input .armor-value {
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.armor-input .armor-value input {
+  width: 40px;
+}
+
+.header-wrap {
+  display: grid;
+  grid: 1fr / 144px 1fr;
+  grid-gap: 32px;
+}
+
+.sheet-tabs {
+  margin-top: 16px;
+  display: grid;
+  grid: 1fr / repeat(3, 1fr);
+  grid-gap: 8px;
+}
+
+.sheet-tabs a.item {
+  cursor: pointer;
+  height: 32px;
+  border: 2px solid #dd3f4e;
+  font-size: 18px;
+  font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #dd3f4e;
+}
+
+.sheet-tabs a.item:hover {
+  color: #9b1b27;
+  border: 2px solid #9b1b27;
+  text-shadow: none;
+}
+
+.sheet-tabs a.item.active {
+  text-shadow: none;
+  color: #fff;
+  background-color: #dd3f4e;
+}
+
+.skills-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.stats-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.stats-section .stat-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.stats-section .stat-row .stat-input {
+  margin: 0px;
+}
+
+.stats-section .rem-luck {
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.section-head {
+  background-color: #dd3f4e;
+  text-transform: uppercase;
+  width: 144px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  margin-bottom: 8px;
+}
+
+.divider {
+  margin: 16px 0;
+  color: #dd3f4e;
+  border-color: #dd3f4e;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.sect {
+  width: calc(50% - 8px);
+  margin-bottom: 32px;
+}
+
+.sect.mr-8 {
+  margin-right: 8px;
+}
+
+.sect.ml-8 {
+  margin-left: 8px;
+}
+
+.weapon-section {
+  margin-top: 16px;
+}
+
+/* Styles limited to boilerplate sheets */
+.cyberpunkred {
+  min-width: 595px;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: #dd3f4e;
 }
 
 .cyberpunkred .background-sheet {

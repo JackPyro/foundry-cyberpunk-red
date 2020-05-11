@@ -1,45 +1,184 @@
 <form class="{{cssClass}} background-sheet" autocomplete="off">
   {{!-- Sheet Header --}}
   <header>
-    <div class="base">
-      <div class="image-wrap">
+    <div class="header-wrap">
+      <div class="header-avatar">
         <img
-          class="base-img"
+          class="profile-img"
           src="{{actor.img}}"
           data-edit="img"
           title="{{actor.name}}"
+          height="128px"
+          width="144px"
         />
       </div>
-      <div class="base-info">
-        <div class="form-grp full">
-          <label>Handle</label>
-          <input name="name" type="text" value="{{actor.name}}" />
+      <div class="header-form">
+        <div class="input-grp">
+          <label>HANDLE</label>
+          <input type="text" name="name" value="{{actor.name}}" />
         </div>
-        <div class="form-grp full">
-          <label>Role</label>
-          <input name="name" type="text" value="{{actor.name}}" />
+        <div class="input-grp">
+          <label>ROLE</label>
+          <input type="text" />
         </div>
-        <div class="form-inline">
-          <div class="form-grp">
-            <label>Age</label>
-            <input
-              class="number-input"
-              name="name"
-              type="number"
-              value="{{actor.name}}"
-            />
+        <div class="grid-wrap">
+          <div class="input-grp">
+            <label>AGE</label>
+            <input type="text" />
           </div>
-          <div class="form-grp">
-            <label>Points</label>
-            <input
-              class="number-input"
-              name="name"
-              type="number"
-              value="{{actor.name}}"
-            />
+
+          <div class="input-grp">
+            <label>POINTS</label>
+            <input type="text" />
           </div>
         </div>
       </div>
     </div>
   </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="skills">Skills</a>
+    <a class="item" data-tab="gear">Gear</a>
+    <a class="item" data-tab="bio">Bio</a>
+  </nav>
+
+  <hr class="divider" />
+  <section class="sheet-body">
+    <div class="tab skills-tab" data-group="primary" data-tab="skills">
+      <div class="skills-layout">
+        <section class="stats-section sect mr-8">
+          <h1 class="section-head">STATS</h1>
+          <div class="stat-row">
+            <div class="stat-input">
+              <label>INT</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>REF</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>DEX</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>TECH</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>COOL</label>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-input">
+              <label>WILL</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>LUCK</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>MOVE</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>BODY</label>
+              <input type="text" />
+            </div>
+
+            <div class="stat-input">
+              <label>EMP</label>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="rem-luck styled-input wide-label">
+            <label>REMAINING LUCK</label>
+            <input type="text" />
+          </div>
+        </section>
+
+        <section class="damage-section sect ml-8">
+          <h1 class="section-head">Damage</h1>
+          <div class="styled-input flex">
+            <label>CURRENT HP</label>
+            <input type="text" />
+          </div>
+          <div class="styled-input flex">
+            <label>STARTING HP</label>
+            <input type="text" />
+          </div>
+          <div class="styled-input flex">
+            <label>SRSLY WOUNDED</label>
+            <input type="text" />
+          </div>
+          <div class="styled-input flex">
+            <label>DEATH SAVES</label>
+            <input type="text" />
+          </div>
+        </section>
+        <section class="skills-section sect mr-8">
+          <h1 class="section-head">SKILLS</h1>
+          <!--          <div class="skill-input no-bg">-->
+          <!--            <input class="si-name" type="text" />-->
+          <!--            <input class="si-rate" type="text" />-->
+          <!--            <input class="si-stat" type="text" />-->
+          <!--            <button class="si-roll">ROLL</button>-->
+          <!--          </div>-->
+          <button type="button" class="skill-roll">ATHLETIC (DEX+5)</button>
+          <button type="button" class="skill-roll">BRAWLING (DEX+5)</button>
+          <button type="button" class="skill-roll">PERSUASION (COOL+5)</button>
+        </section>
+        <section class="combat-section sect ml-8">
+          <section class="armor-section">
+            <h1 class="section-head">ARMOR</h1>
+            <div class="armor-input">
+              <input
+                class="armor-name"
+                type="text"
+                value="Light Armor Jacket"
+              />
+              <span class="armor-value">
+                <label> HEAD </label>
+                <input class="sml" type="text" />
+              </span>
+              <span class="armor-value">
+                <label> BODY </label>
+                <input class="sml" type="text" />
+              </span>
+            </div>
+          </section>
+
+          <section class="weapon-section">
+            <h1 class="section-head">WEAPON</h1>
+            <button
+              type="button "
+              class="skill-roll weapon-roll rollable"
+              data-roll="2d6"
+              data-label="Shotgun Damage"
+            >
+              Shotgun (2d6)
+            </button>
+          </section>
+        </section>
+      </div>
+    </div>
+    <div class="tab gear-tab" data-group="primary" data-tab="gear">
+      gear tab
+    </div>
+
+    <div class="tab bio-tab" data-group="primary" data-tab="bio">
+      bio tab
+    </div>
+  </section>
 </form>

@@ -1,0 +1,102 @@
+.header-wrap {
+  display: grid;
+  grid: 1fr / 144px 1fr;
+  grid-gap: 32px;
+}
+
+.sheet-tabs {
+  margin-top: 16px;
+  display: grid;
+  grid: 1fr / repeat(3, 1fr);
+  grid-gap: 8px;
+
+  a.item {
+    cursor: pointer;
+
+    &:hover {
+      color: darken($c-main, 20%);
+      border: 2px solid darken($c-main, 20%);
+      text-shadow: none;
+    }
+
+    &.active {
+      text-shadow: none;
+      color: $c-white;
+      background-color: $c-main;
+    }
+
+    height: 32px;
+    border: 2px solid $c-main;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $c-main;
+  }
+}
+
+.skills-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stats-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .stat-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    .stat-input {
+      margin: 0px;
+    }
+  }
+
+  .rem-luck {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+.section-head {
+  background-color: $c-main;
+  text-transform: uppercase;
+  width: 144px;
+  color: $c-white;
+  font-size: 17px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  margin-bottom: 8px;
+}
+
+.divider {
+  margin: 16px 0;
+  color: $c-main;
+  border-color: $c-main;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.sect {
+  width: calc(50% - 8px);
+  margin-bottom: 32px;
+  &.mr-8 {
+    margin-right: 8px;
+  }
+  &.ml-8 {
+    margin-left: 8px;
+  }
+}
+
+.weapon-section {
+  margin-top: 16px;
+}
