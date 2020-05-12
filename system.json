@@ -9,7 +9,6 @@
   "esmodules": ["module/system.js"],
   "styles": ["css/main.css"],
   "scripts": [],
-  "packs": [],
   "languages": [
     {
       "lang": "en",
@@ -19,6 +18,6 @@
   ],
   "gridDistance": 5,
   "gridUnits": "ft",
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power"
+  "primaryTokenAttribute": "hp",
+  "packs": []
 }

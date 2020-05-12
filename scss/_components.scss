@@ -51,9 +51,10 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 8px;
+    flex-wrap: wrap;
     .stat-input {
       margin: 0px;
+      margin-bottom: 8px;
     }
   }
 

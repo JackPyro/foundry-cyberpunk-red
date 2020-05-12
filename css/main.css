@@ -319,11 +319,13 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 8px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .stats-section .stat-row .stat-input {
   margin: 0px;
+  margin-bottom: 8px;
 }
 
 .stats-section .rem-luck {

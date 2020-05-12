@@ -19,12 +19,16 @@
         </div>
         <div class="input-grp">
           <label>ROLE</label>
-          <input type="text" />
+          <input type="text" name="role" value="{{actor.role}}" />
         </div>
         <div class="grid-wrap">
           <div class="input-grp">
             <label>AGE</label>
-            <input type="text" />
+            <input
+              type="text"
+              name="data.age.value"
+              value="{{data.age.value}}"
+            />
           </div>
 
           <div class="input-grp">
@@ -49,62 +53,25 @@
         <section class="stats-section sect mr-8">
           <h1 class="section-head">STATS</h1>
           <div class="stat-row">
+            {{#each data.stats as |stat key|}}
             <div class="stat-input">
-              <label>INT</label>
-              <input type="text" />
+              <label>{{key}}</label>
+              <input
+                type="text"
+                name="data.stats.{{key}}.value"
+                value="{{stat.value}}"
+              />
             </div>
-
-            <div class="stat-input">
-              <label>REF</label>
-              <input type="text" />
-            </div>
-
-            <div class="stat-input">
-              <label>DEX</label>
-              <input type="text" />
-            </div>
-
-            <div class="stat-input">
-              <label>TECH</label>
-              <input type="text" />
-            </div>
-
-            <div class="stat-input">
-              <label>COOL</label>
-              <input type="text" />
-            </div>
-          </div>
-
-          <div class="stat-row">
-            <div class="stat-input">
-              <label>WILL</label>
-              <input type="text" />
-            </div>
-
-            <div class="stat-input">
-              <label>LUCK</label>
-              <input type="text" />
-            </div>
-
-            <div class="stat-input">
-              <label>MOVE</label>
-              <input type="text" />
-            </div>
-
-            <div class="stat-input">
-              <label>BODY</label>
-              <input type="text" />
-            </div>
-
-            <div class="stat-input">
-              <label>EMP</label>
-              <input type="text" />
-            </div>
+            {{/each}}
           </div>
 
           <div class="rem-luck styled-input wide-label">
             <label>REMAINING LUCK</label>
-            <input type="text" />
+            <input
+              value="{{data.remaining_luck}}"
+              name="{{data.remaining_luck}}"
+              type="text"
+            />
           </div>
         </section>
 
@@ -112,19 +79,35 @@
           <h1 class="section-head">Damage</h1>
           <div class="styled-input flex">
             <label>CURRENT HP</label>
-            <input type="text" />
+            <input
+              type="text"
+              value="{{data.damage.hp.value}}"
+              name="{{data.damage.hp.value}}"
+            />
           </div>
           <div class="styled-input flex">
             <label>STARTING HP</label>
-            <input type="text" />
+            <input
+              type="text"
+              value="{{data.damage.max_hp.value}}"
+              name="{{data.damage.max_hp.value}}"
+            />
           </div>
           <div class="styled-input flex">
             <label>SRSLY WOUNDED</label>
-            <input type="text" />
+            <input
+              type="text"
+              value="{{data.damage.wounded.value}}"
+              name="{{data.damage.wounded.value}}"
+            />
           </div>
           <div class="styled-input flex">
             <label>DEATH SAVES</label>
-            <input type="text" />
+            <input
+              type="text"
+              value="{{data.damage.death_saves.value}}"
+              name="{{data.damage.death_saves.value}}"
+            />
           </div>
         </section>
         <section class="skills-section sect mr-8">

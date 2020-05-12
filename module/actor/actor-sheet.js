@@ -26,10 +26,8 @@ export class CyberpunkRedActorSheet extends ActorSheet {
   /** @override */
   getData() {
     const data = super.getData();
-    data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.attributes)) {
-      attr.isCheckbox = attr.dtype === "Boolean";
-    }
+
+    console.log(data);
     return data;
   }
 

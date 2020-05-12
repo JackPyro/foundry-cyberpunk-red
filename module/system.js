@@ -3,13 +3,13 @@ import { CyberpunkRedActor } from "./actor/actor.js";
 import { CyberpunkRedActorSheet } from "./actor/actor-sheet.js";
 import { CyberpunkRedItem } from "./item/item.js";
 import { CyberpunkRedItemSheet } from "./item/item-sheet.js";
+import { migrate } from "../lib/migrate.js";
 
 Hooks.once("init", async function () {
   game.cyberpunkred = {
     CyberpunkRedActor,
     CyberpunkRedItem,
   };
-
   /**
    * Set an initiative formula for the system
    * @type {String}
@@ -47,9 +47,13 @@ Hooks.once("init", async function () {
   Handlebars.registerHelper("toLowerCase", function (str) {
     return str.toLowerCase();
   });
+
+  Handlebars.registerHelper("image", function (name) {
+    const URL = "/systems/cyberpunkred/images/";
+    return `${URL}${name}`;
+  });
 });
 
-Handlebars.registerHelper("image", function (name) {
-  const URL = "/systems/cyberpunkred/images/";
-  return `${URL}${name}`;
+Hooks.once("ready", async function () {
+  migrate();
 });
