@@ -185,34 +185,44 @@
 		}
 	},
 	"Item": {
-		"types": [
-			"skills",
-			"gear",
-			"weapons",
-			"armor",
-			"netrunner_gear",
-			"cyberware"
-		],
+		"types": ["armor", "weapons", "cyberware", "programms", "skills", "gear"],
 		"templates": {
 			"base": {
 				"description": ""
 			}
 		},
-
-		"armor": {},
-		"weapons": {
-			"weaponName": "dakka",
-			"specialEffect": "melee",
-			"damage": "1d3"
+		"armor": {
+			"name": "",
+			"head": 0,
+			"body": 0
 		},
-		"cyberware": {},
-		"gear": {},
-		"netrunner_gear": {},
+		"weapons": {
+			"name": "",
+			"specialEffect": "",
+			"damage": ""
+		},
+		"cyberware": {
+			"cyberware": "",
+			"damage": "",
+			"description": ""
+		},
+		"programms": {
+			"name": "",
+			"class": "",
+			"att": 0,
+			"def": 0,
+			"rez": 0,
+			"description": ""
+		},
 		"skills": {
-			"templates": ["base"],
-			"skillName": "durka",
+			"name": "durka",
 			"value": 0,
-			"tag": "DEX"
+			"attribute": "DEX",
+			"description": ""
+		},
+		"gear": {
+			"name": "",
+			"description": ""
 		}
 	}
 }
