@@ -296,7 +296,7 @@
 .sheet-tabs {
   margin-top: 16px;
   display: grid;
-  grid: 1fr / repeat(3, 1fr);
+  grid: 1fr/repeat(3, 1fr);
   grid-gap: 8px;
 }
 
