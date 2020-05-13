@@ -1,89 +1,140 @@
 {
-  "Actor": {
-    "types": ["character"],
-    "templates": {
-      "hp_preset": {
-        "damage": {
-          "hp": {
-            "value": 1,
-            "min": 0
-          },
-          "max_hp": {
-            "value": 1,
-            "min": 0
-          },
-          "wounded": {
-            "value": 0,
-            "min": 0
-          },
-          "death_saves": {
-            "value": 0,
-            "min": 0
-          }
-        }
-      },
-      "stats_preset": {
-        "stats": {
-          "int": {
-            "value": 1
-          },
-          "ref": {
-            "value": 1
-          },
-          "dex": {
-            "value": 1
-          },
-          "tech": {
-            "value": 1
-          },
-          "cool": {
-            "value": 1
-          },
-          "will": {
-            "value": 1
-          },
-          "luck": {
-            "value": 1
-          },
-          "move": {
-            "value": 1
-          },
-          "body": {
-            "value": 1
-          },
-          "emp": {
-            "value": 1
-          }
-        }
-      }
-    },
-    "character": {
-      "templates": ["hp_preset", "stats_preset"],
-      "role": "",
-      "remaining_luck": 0,
-      "age": {
-        "value": 18,
-        "max": 200
-      },
-      "biography": "",
-      "attributes": {
-        "level": {
-          "value": 1
-        }
-      }
-    }
-  },
-  "Item": {
-    "types": ["item"],
-    "templates": {
-      "base": {
-        "description": ""
-      }
-    },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0
-    }
-  }
+	"Actor": {
+		"types": ["character"],
+		"templates": {
+			"hp_preset": {
+				"damage": {
+					"current_hp": {
+						"value": 10,
+						"min": 0
+					},
+					"base_hp": {
+						"value": 10,
+						"min": 0
+					},
+					"starting_hp": {
+						"value": 10,
+						"min": 0
+					},
+					"wounded": {
+						"value": 5,
+						"min": 0
+					},
+					"death_saves": {
+						"value": 2,
+						"min": 0
+					}
+				}
+			},
+
+			"stats_preset": {
+				"stats": {
+					"int": {
+						"value": 1,
+						"locked": false
+					},
+					"ref": {
+						"value": 1,
+						"locked": false
+					},
+					"dex": {
+						"value": 1,
+						"locked": false
+					},
+					"tech": {
+						"value": 1,
+						"locked": false
+					},
+					"cool": {
+						"value": 1,
+						"locked": false
+					},
+					"will": {
+						"value": 1,
+						"locked": false
+					},
+					"luck": {
+						"value": 1,
+						"locked": false
+					},
+					"move": {
+						"value": 1,
+						"locked": false
+					},
+					"body": {
+						"value": 1,
+						"locked": false
+					},
+					"emp": {
+						"value": 1,
+						"locked": false
+					}
+				}
+			},
+			"bio_preset": {
+				"life path": {
+					"background": "",
+					"motivation": "",
+					"goals": "",
+					"friends": "",
+					"enemies": "",
+					"romance": "",
+					"personality": ""
+				}
+			}
+		},
+		"character": {
+			"templates": ["hp_preset", "stats_preset", "bio_preset"],
+			"role": "",
+			"remaining_luck": 0,
+			"age": {
+				"value": 18,
+				"max": 200
+			},
+			"money": 100,
+			"biography": "",
+			"attributes": {}
+		}
+	},
+	"Item": {
+		"types": ["armor", "weapons", "cyberware", "programms", "skills", "gear"],
+		"templates": {
+			"base": {
+				"description": ""
+			}
+		},
+		"armor": {
+			"name": "",
+			"head": 0,
+			"body": 0
+		},
+		"weapons": {
+			"name": "",
+			"specialEffect": "",
+			"damage": ""
+		},
+		"cyberware": {
+			"cyberware": "",
+			"damage": "",
+			"description": ""
+		},
+		"programms": {
+			"name": "",
+			"class": "",
+			"att": 0,
+			"def": 0,
+			"rez": 0,
+			"description": ""
+		},
+		"skills": {
+			"name": "durka",
+			"value": 0,
+			"attribute": "DEX",
+			"description": ""
+		},
+		"gear": {
+			"name": "",
+			"description": ""
+		}
+	}
 }
