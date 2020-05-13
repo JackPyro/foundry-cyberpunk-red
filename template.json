@@ -201,10 +201,9 @@
 
 		"armor": {},
 		"weapons": {
-			"templates": ["base"],
 			"weaponName": "dakka",
-			"damage": 10,
-			"price": 99
+			"specialEffect": "melee",
+			"damage": "1d3"
 		},
 		"cyberware": {},
 		"gear": {},
