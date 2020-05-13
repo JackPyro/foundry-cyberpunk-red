@@ -26,8 +26,7 @@ export class CyberpunkRedActor extends Actor {
 		const data = actorData.data;
 
 		// Make modifications to data here. For example:
-		data.remaining_luck =
-			parseInt(data.stats.int.value) + parseInt(data.stats.tech.value);
+
 		// Loop through ability scores, and add their modifiers to our sheet output.
 	}
 }
