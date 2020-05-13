@@ -9,7 +9,33 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 16px;
+}
+
+.input-grp textarea {
+  background-color: white;
+  border: 2px solid #0c0d0c;
+  padding-left: 8px;
+  color: #dd3f4e;
+  margin-top: 8px;
+  font-size: 12px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.input-grp.no-label input {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.input-grp.black label {
+  background: #0c0d0c;
+  border: 2px solid #0c0d0c;
+}
+
+.input-grp.black input {
+  border: 2px solid #0c0d0c;
 }
 
 .input-grp label {
@@ -17,6 +43,8 @@
   border: 2px solid #dd3f4e;
   width: 80px;
   height: 32px;
+  -ms-flex-preferred-size: 80px;
+  flex-basis: 80px;
   min-width: 80px;
   font-weight: bold;
   font-size: 14px;
@@ -34,7 +62,10 @@
 }
 
 .input-grp input {
+  -ms-flex-preferred-size: calc(100% - 80px);
+  flex-basis: calc(100% - 80px);
   border: 2px solid #dd3f4e;
+  font-size: 12px;
   padding-left: 8px;
   height: 32px;
   border-radius: 0px 10px 0px 0px;
@@ -172,6 +203,14 @@
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 8px;
+}
+
+.skill-roll:hover {
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #9b1b27;
+  color: #9b1b27;
 }
 
 .skill-input {
@@ -334,7 +373,29 @@
   flex-basis: 100%;
 }
 
-.section-head {
+.section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.section-header .item-create i {
+  font-size: 22px;
+  color: #dd3f4e;
+}
+
+.section-header .section-title {
+  margin-bottom: 0px;
+}
+
+.section-title {
   background-color: #dd3f4e;
   text-transform: uppercase;
   width: 144px;
@@ -376,8 +437,51 @@
   margin-left: 8px;
 }
 
+.roll-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.roll-button .skill-roll {
+  border-radius: 6px 0px 0px 6px;
+  margin: 0px;
+}
+
+.roll-button .item-delete {
+  cursor: pointer;
+  border-radius: 0px 6px 6px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 30px;
+  width: 40px;
+  background-color: #dd3f4e;
+}
+
+.roll-button .item-delete:hover {
+  background-color: #9b1b27;
+}
+
+.roll-button .item-delete i {
+  color: white;
+}
+
 .weapon-section {
   margin-top: 16px;
+}
+
+.gear-wrapper {
+  grid: 1fr / 1fr 1fr;
+  grid-gap: 16px;
+  display: grid;
 }
 
 /* Styles limited to boilerplate sheets */

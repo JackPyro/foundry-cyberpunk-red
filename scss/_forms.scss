@@ -1,13 +1,41 @@
 .input-grp {
   display: flex;
-
+  flex-wrap: wrap;
   margin-bottom: 16px;
+
+  textarea {
+    background-color: white;
+    border: 2px solid $c-black;
+    padding-left: 8px;
+    color: $c-main;
+    margin-top: 8px;
+    font-size: 12px;
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  &.no-label {
+    input {
+      flex-basis: 100%;
+    }
+  }
+
+  &.black {
+    label {
+      background: $c-black;
+      border: 2px solid $c-black;
+    }
+
+    input {
+      border: 2px solid $c-black;
+    }
+  }
 
   label {
     background: $c-main;
     border: 2px solid $c-main;
     width: 80px;
     height: 32px;
+    flex-basis: 80px;
 
     min-width: 80px;
     font-weight: bold;
@@ -20,7 +48,9 @@
   }
 
   input {
-    border: 2px solid #dd3f4e;
+    flex-basis: calc(100% - 80px);
+    border: 2px solid $c-main;
+    font-size: 12px;
     padding-left: 8px;
     height: 32px;
     border-radius: 0px 10px 0px 0px;
@@ -134,6 +164,13 @@
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 8px;
+
+  &:hover {
+    text-shadow: none;
+    box-shadow: none;
+    border-color: darken($c-main, 20%);
+    color: darken($c-main, 20%);
+  }
 }
 
 .skill-input {

@@ -64,7 +64,21 @@
   }
 }
 
-.section-head {
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  .item-create i {
+    font-size: 22px;
+    color: $c-main;
+  }
+  .section-title {
+    margin-bottom: 0px;
+  }
+}
+
+.section-title {
   background-color: $c-main;
   text-transform: uppercase;
   width: 144px;
@@ -98,6 +112,38 @@
   }
 }
 
+.roll-button {
+  display: flex;
+  margin-bottom: 8px;
+  .skill-roll {
+    border-radius: 6px 0px 0px 6px;
+    margin: 0px;
+  }
+
+  .item-delete {
+    &:hover {
+      background-color: darken($c-main, 20%);
+    }
+    cursor: pointer;
+    border-radius: 0px 6px 6px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 40px;
+    background-color: $c-main;
+    i {
+      color: white;
+    }
+  }
+}
+
 .weapon-section {
   margin-top: 16px;
+}
+
+.gear-wrapper {
+  grid: 1fr / 1fr 1fr;
+  grid-gap: 16px;
+  display: grid;
 }

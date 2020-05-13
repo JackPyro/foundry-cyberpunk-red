@@ -51,7 +51,7 @@
     <div class="tab skills-tab" data-group="primary" data-tab="skills">
       <div class="skills-layout">
         <section class="stats-section sect mr-8">
-          <h1 class="section-head">STATS</h1>
+          <h1 class="section-title">STATS</h1>
           <div class="stat-row">
             {{#each data.stats as |stat key|}}
             <div class="stat-input">
@@ -76,7 +76,7 @@
         </section>
 
         <section class="damage-section sect ml-8">
-          <h1 class="section-head">Damage</h1>
+          <h1 class="section-title">Damage</h1>
           <div class="styled-input flex">
             <label>CURRENT HP</label>
             <input
@@ -111,20 +111,33 @@
           </div>
         </section>
         <section class="skills-section sect mr-8">
-          <h1 class="section-head">SKILLS</h1>
+          <div class="section-header">
+            <h1 class="section-title">SKILLS</h1>
+            <div class="item-create" data-type="item">
+              <i class="fas fa-plus-square"></i>
+            </div>
+          </div>
           <!--          <div class="skill-input no-bg">-->
           <!--            <input class="si-name" type="text" />-->
           <!--            <input class="si-rate" type="text" />-->
           <!--            <input class="si-stat" type="text" />-->
           <!--            <button class="si-roll">ROLL</button>-->
           <!--          </div>-->
-          <button type="button" class="skill-roll">ATHLETIC (DEX+5)</button>
+          <div class="roll-button">
+            <button type="button" class="skill-roll">ATHLETIC (DEX+5)</button>
+            <div class="item-delete"><i class="fas fa-trash-alt"></i></div>
+          </div>
           <button type="button" class="skill-roll">BRAWLING (DEX+5)</button>
           <button type="button" class="skill-roll">PERSUASION (COOL+5)</button>
         </section>
         <section class="combat-section sect ml-8">
           <section class="armor-section">
-            <h1 class="section-head">ARMOR</h1>
+            <div class="section-header">
+              <h1 class="section-title">ARMOR</h1>
+              <div class="item-create" data-type="item">
+                <i class="fas fa-plus-square"></i>
+              </div>
+            </div>
             <div class="armor-input">
               <input
                 class="armor-name"
@@ -143,7 +156,12 @@
           </section>
 
           <section class="weapon-section">
-            <h1 class="section-head">WEAPON</h1>
+            <div class="section-header">
+              <h1 class="section-title">WEAPON</h1>
+              <div class="item-create" data-type="item">
+                <i class="fas fa-plus-square"></i>
+              </div>
+            </div>
             <button
               type="button "
               class="skill-roll weapon-roll rollable"
@@ -157,7 +175,28 @@
       </div>
     </div>
     <div class="tab gear-tab" data-group="primary" data-tab="gear">
-      gear tab
+      <div class="gear-wrapper">
+        <div class="cyberware-row">
+          <div class="section-header">
+            <h1 class="section-title">CYBERWARE</h1>
+            <div class="item-create" data-type="item">
+              <i class="fas fa-plus-square"></i>
+            </div>
+          </div>
+          <div class="input-grp black no-label">
+            <input type="text" placeholder="Name" />
+            <textarea placeholder="Description"></textarea>
+          </div>
+        </div>
+        <div class="gear-row">
+          <div class="section-header">
+            <h1 class="section-title">GEAR</h1>
+            <div class="item-create" data-type="item">
+              <i class="fas fa-plus-square"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="tab bio-tab" data-group="primary" data-tab="bio">
